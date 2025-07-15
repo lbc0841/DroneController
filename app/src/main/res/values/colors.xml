@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <color name="transparent">#00ffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="white">#ffffffff</color>
+    <color name="red">#ffff0000</color>
+
+    <color name="app_background">#000000</color>
+    <color name="title_bar_background">#ff2b2b2b</color>
+    <color name="status_bar_background">#1e1e1e</color>
+    <color name="navigation_bar_background">#ff000000</color>
+    <color name="navigation_view_background">#e0303030</color>
+    <color name="dialog_box_background">#f0808080</color>
+
+    <color name="crosshair_color">#40ffffff</color>
+    <color name="direction_arrow_color">#ddffff00</color>
+
+    <color name="app_text_color">#ffffffff</color>
+    <color name="app_hint_color">#e0909090</color>
+    <color name="app_button_color">#bb313335</color>
+    <color name="message_color">#ff1e1f20</color>
+
+    <color name="switch_on_color">#ffffffff</color>
+    <color name="switch_off_color">#ff297ad0</color>
+
+</resources>

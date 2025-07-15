@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    tools:context=".activities.SettingActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@color/title_bar_background"
+        android:layout_marginBottom="10dp">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_back"
+            android:scaleX="2"
+            android:scaleY="2"
+            app:tint="@color/white"
+            android:background="@color/title_bar_background"
+            android:layout_marginStart="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/options"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/app_text_color"
+            android:padding="10dp"
+            android:gravity="center_vertical" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/optionsScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:text="@string/scan"
+                android:textColor="@color/app_hint_color"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:gravity="center_vertical"
+                    android:text="@string/scan_period"
+                    android:textColor="@color/app_text_color"
+                    android:textSize="18sp" />
+
+
+                <EditText
+                    android:id="@+id/scanPeriodEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:backgroundTint="@color/white"
+                    android:hint="@string/ms"
+                    android:inputType="number"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textColorHint="@color/app_hint_color"
+                    android:maxLength="5" />
+
+            </LinearLayout>
+
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/hideUnknownDeviceSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:text="@string/hide_unknown_devices"
+                android:textColor="@color/app_text_color"
+                android:textSize="18sp"
+                app:thumbTint="@color/white"
+                app:trackDecorationTint="@color/white"
+                app:trackTint="@color/black" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginVertical="16dp"
+                android:background="@color/app_hint_color" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="4dp"
+                android:text="@string/display"
+                android:textColor="@color/app_hint_color"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

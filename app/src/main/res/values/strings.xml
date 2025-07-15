@@ -1,0 +1,123 @@
+<resources>
+    <string name="app_name">Drone Controller</string>
+    <string name="lbc">lbc</string>
+
+    <string name="back">Back</string>
+
+    <!--    Scan-->
+    <string name="scan">Scan</string>
+    <string name="rescan">Rescan</string>
+    <string name="bluetooth">Bluetooth</string>
+
+    <!--    RemoteControl-->
+    <string name="reset_gyro">Reset</string>
+    <string name="lock_gyro">Lock Gyro</string>
+    <string name="unlock_gyro">Unlock Gyro</string>
+    <string name="take_off">Take Off</string>
+    <string name="landing">Landing</string>
+    <string name="rssi">RSSI</string>
+
+    <!--    BLE-->
+    <string name="device_name">Device Name</string>
+    <string name="device_address">Device Address :</string>
+    <string name="address">00:00:00:00:00:00</string>
+    <string name="no_devices_found">No Devices Found</string>
+
+    <string name="velocity">velocity X &amp; velocity Y</string>
+
+    <!--    Gyroscope Test-->
+    <string name="accelerometer">Accelerometer</string>
+    <string name="gyroscope">Gyroscope</string>
+
+    <string name="x">X </string>
+    <string name="y">Y </string>
+    <string name="z">Z </string>
+
+    <string name="acceleration_x">Acceleration X</string>
+    <string name="acceleration_y">Acceleration Y</string>
+    <string name="acceleration_z">Acceleration Z</string>
+
+    <string name="pitch">Pitch</string>
+    <string name="roll">Roll</string>
+
+    <!--    Drawer-->
+    <string name="gyroscope_test">Gyroscope Test</string>
+    <string name="ble_connection_test">BLE Connection Test</string>
+    <string name="command_list">Command List</string>
+    <string name="drone_test">Drone Test / PID Setup</string>
+    <string name="options">Options</string>
+    <string name="about_app">About App</string>
+
+    <string name="drawer_open">DrawerOpen</string>
+    <string name="drawer_close">DrawerClose</string>
+
+    <!--    BLE Test-->
+    <string name="transmission_test">Transmission Test</string>
+    <string name="send_data">Send Data</string>
+    <string name="data">Data</string>
+    <string name="time">00:00:00</string>
+
+    <string name="mode">Mode</string>
+    <string name="text">Text (UTF-8)</string>
+    <string name="byte_array_hex">Byte Array (hex)</string>
+    <string name="byte_array_dec">Byte Array (dec)</string>
+
+
+    <!--    AT Command-->
+    <string name="command_description">Command Description</string>
+    <string name="at_command">AT Command</string>
+
+    <!--    Drone Test-->
+    <string name="motor_fr">Motor FR</string>
+    <string name="motor_fl">Motor FL</string>
+    <string name="motor_br">Motor BR</string>
+    <string name="motor_bl">Motor BL</string>
+    <string name="motor_all">All Motor</string>
+
+
+    <string name="add">＋</string>
+    <string name="sub">－</string>
+    <string name="stop">Stop</string>
+
+    <string name="altitude">Altitude</string>
+    <string name="air_pressure">Air Pressure</string>
+
+    <string name="kp">Kp</string>
+    <string name="ki">Ki</string>
+    <string name="kd">Kd</string>
+
+    <string name="speed">0</string>
+    <string name="angle">0</string>
+
+    <string name="motor_speed">Motor Speed</string>
+    <string name="target_angle">Target Angle</string>
+    <string name="pid">PID</string>
+    <string name="qmi8658">QMI8658</string>
+    <string name="lps22hb">LPS22HB</string>
+    <string name="battery">Battery</string>
+
+    <!--    Setting-->
+    <string name="scan_period">Scan Period</string>
+    <string name="hide_unknown_devices">Hide Unknown Devices</string>
+    <string name="display">Display</string>
+
+
+    <!--    About App-->
+    <string name="app_version">App Version</string>
+    <string name="beta">Beta</string>
+    <string name="developer">Developer</string>
+
+    <string name="date">2024 Nov</string>
+
+    <!--    Dialog Box-->
+    <string name="ble_disconnected">Bluetooth connection disconnected</string>
+    <string name="choose_device">Choose Device</string>
+
+    <string name="ms">ms</string>
+
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+
+
+
+</resources>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.GyroTestActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@color/title_bar_background">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_back"
+            android:scaleX="2"
+            android:scaleY="2"
+            app:tint="@color/white"
+            android:background="@color/title_bar_background"
+            android:layout_marginStart="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/gyroscope_test"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/app_text_color"
+            android:padding="10dp"
+            android:gravity="center_vertical" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/app_background"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/display"
+                    android:textSize="20sp"
+                    android:textColor="@color/white" />
+
+                <Spinner
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_marginVertical="16dp" >
+
+                <com.ben.dronecontroller.views.PitchRollView
+                    android:id="@+id/pitchRollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/resetButton"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reset_gyro"
+                    android:backgroundTint="@color/app_button_color"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!-- Accelerometer -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/accelerometer"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="12dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/accX"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/x"
+                    android:textSize="16sp"
+                    android:textColor="@color/app_hint_color"
+                    android:layout_marginHorizontal="6dp"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:id="@+id/accY"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/y"
+                    android:textSize="16sp"
+                    android:textColor="@color/app_hint_color"
+                    android:layout_marginHorizontal="6dp"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:id="@+id/accZ"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/z"
+                    android:textSize="16sp"
+                    android:textColor="@color/app_hint_color"
+                    android:layout_marginHorizontal="6dp"
+                    android:singleLine="true"/>
+
+            </LinearLayout>
+
+            <!-- Gyroscope -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/gyroscope"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="12dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/gyroX"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/x"
+                    android:textSize="16sp"
+                    android:textColor="@color/app_hint_color"
+                    android:layout_marginHorizontal="6dp"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:id="@+id/gyroY"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/y"
+                    android:textSize="16sp"
+                    android:textColor="@color/app_hint_color"
+                    android:layout_marginHorizontal="6dp"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:id="@+id/gyroZ"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/z"
+                    android:textSize="16sp"
+                    android:textColor="@color/app_hint_color"
+                    android:layout_marginHorizontal="6dp"
+                    android:singleLine="true"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/pitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pitch"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/roll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/roll"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

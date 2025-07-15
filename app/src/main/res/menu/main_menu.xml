@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_gyroTest"
+            android:icon="@drawable/ic_rotate_phone"
+            android:title="@string/gyroscope_test"/>
+        <item
+            android:id="@+id/nav_bleTest"
+            android:icon="@drawable/ic_bluetooth"
+            android:title="@string/ble_connection_test"/>
+
+        <item
+            android:id="@+id/nav_commandList"
+            android:icon="@drawable/ic_code"
+            android:title="@string/command_list"/>
+
+        <item
+            android:id="@+id/nav_droneTest"
+            android:icon="@drawable/ic_drone"
+            android:title="@string/drone_test"/>
+
+        <item
+            android:id="@+id/nav_options"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/options"/>
+
+        <item
+            android:id="@+id/nav_aboutApp"
+            android:icon="@drawable/ic_android"
+            android:title="@string/about_app"/>
+
+    </group>
+</menu>
