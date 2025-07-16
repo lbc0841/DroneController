@@ -4,8 +4,9 @@
 
 ## 相關 repo
 
-- ~~[Drone]()~~
-- [Drone - PCB](https://github.com/lbc0841/DronePCB)
+- [Drone](https://github.com/lbc0841/Drone)
+- [Drone PCB](https://github.com/lbc0841/DronePCB)
+- [Drone Controller](https://github.com/lbc0841/DroneController)
 
 ## 元件
 
