@@ -1,12 +1,15 @@
 # DroneController
 
-## 用途
-
 調整 PID / 遙控無人機
 
-## 內容
+## 相關 repo
 
-- STM32: STM32TBU6
+- ~~[Drone]()~~
+- [Drone - PCB](https://github.com/lbc0841/DronePCB)
+
+## 元件
+
+- STM32: STM32F103TBU6
 - 藍牙模塊: E104-BT52
 
 ## APP 選單
@@ -34,7 +37,7 @@
 ### 手機 -> 無人機
 
 | Header | Command | 數值 * N | Checksum |
-|---|---|---|---|
+|------|------|----------|------|
 | 0xAA | 0x?? | 0x?? * N | 0x?? |
 
 (Checksum = Header xor Command xor Val1 xor Val2 ...)

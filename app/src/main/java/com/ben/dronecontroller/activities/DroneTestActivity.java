@@ -335,35 +335,10 @@ public class DroneTestActivity extends AppCompatActivity implements OnBleConnect
         // init angleView
         binding.angleView.updateValue(0, 0, 0, 0);
         binding.angleView.setMode(Constants.ChartDisplayMode.TARGET_ANGLE_CHART);
-        updateLayout();
 
         // init BluetoothService
         Intent gattServiceIntent = new Intent(this, BluetoothService.class);
         bindService(gattServiceIntent, serviceConnection, BIND_AUTO_CREATE);
-    }
-
-    private void updateLayout(){
-
-        this.runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                // qmi8658
-                binding.ax.setText(String.format(Locale.getDefault(),"\uD835\uDC4Ex : %.2f", ax));
-                binding.ay.setText(String.format(Locale.getDefault(),"\uD835\uDC4Ey : %.2f", ay));
-                binding.az.setText(String.format(Locale.getDefault(),"\uD835\uDC4Ez : %.2f", az));
-
-                binding.gx.setText(String.format(Locale.getDefault(),"ωx : %.2f", gx));
-                binding.gy.setText(String.format(Locale.getDefault(),"ωy : %.2f", gy));
-                binding.gz.setText(String.format(Locale.getDefault(),"ωz : %.2f", gz));
-
-                binding.pitch.setText(String.format(Locale.getDefault(),"pitch : %.2f", pitch));
-                binding.roll.setText (String.format(Locale.getDefault(),"roll : %.2f",  roll));
-
-                binding.angleView.updateValue(targetPitch, targetRoll, pitch, roll);
-
-                uiHandler.postDelayed(this, 50);
-            }
-        });
     }
 
     // OnBleConnectionListener
@@ -399,7 +374,23 @@ public class DroneTestActivity extends AppCompatActivity implements OnBleConnect
                 pitch = (float) (data[14] + data[15]/100.0);
                 roll = (float) (data[16] + data[17]/100.0);
 
-                runOnUiThread(this::updateLayout);
+                this.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        binding.ax.setText(String.format(Locale.getDefault(), "\uD835\uDC4Ex : %.2f", ax));
+                        binding.ay.setText(String.format(Locale.getDefault(), "\uD835\uDC4Ey : %.2f", ay));
+                        binding.az.setText(String.format(Locale.getDefault(), "\uD835\uDC4Ez : %.2f", az));
+
+                        binding.gx.setText(String.format(Locale.getDefault(), "ωx : %.2f", gx));
+                        binding.gy.setText(String.format(Locale.getDefault(), "ωy : %.2f", gy));
+                        binding.gz.setText(String.format(Locale.getDefault(), "ωz : %.2f", gz));
+
+                        binding.pitch.setText(String.format(Locale.getDefault(), "pitch : %.2f", pitch));
+                        binding.roll.setText(String.format(Locale.getDefault(), "roll : %.2f", roll));
+
+                        binding.angleView.updateValue(targetPitch, targetRoll, pitch, roll);
+                    }
+                });
             }
         }
     }
